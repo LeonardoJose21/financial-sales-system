@@ -191,7 +191,7 @@ financial-sales-system/
 -  Redux para manejo de estado
 -  React Hooks y componentes funcionales
 
-## 🎯 Funcionalidades por Rol
+## Funcionalidades por Rol
 
 ### Administrador
 - Ver todas las ventas de todos los usuarios
@@ -207,10 +207,10 @@ financial-sales-system/
 - Ver dashboard con sus propias estadísticas
 - No puede gestionar usuarios
 
-## 📊 Módulos Implementados
+## Módulos Implementados
 
 1. **Autenticación**
-   - Login con email/password
+   - Login/registro con email/contraseña
    - CAPTCHA matemático validado en backend
    - JWT tokens
    - Sesión persistente
@@ -242,7 +242,7 @@ financial-sales-system/
    - Historial de cambios de estado
    - Tracking de usuarios que modifican
 
-## 🧪 Testing
+## Testing
 
 Backend:
 ```bash
@@ -256,7 +256,7 @@ cd frontend
 npm test
 ```
 
-## 📦 Scripts Disponibles
+## Scripts Disponibles
 
 ### Backend
 - `npm start` - Iniciar servidor producción
@@ -313,7 +313,7 @@ docker-compose down
 - PATCH `/api/sales/:id/status` - Cambiar estado
 - GET `/api/sales/statistics` - Estadísticas
 
-## Deploy en AWS (Opcional)
+## Despliegue en AWS
 
 1. EC2 para backend
 2. RDS PostgreSQL para base de datos
