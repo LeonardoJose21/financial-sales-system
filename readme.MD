@@ -2,7 +2,7 @@
 
 Sistema completo de gestión de ventas de productos financieros con autenticación JWT, CRUD de usuarios y ventas, validación CAPTCHA, y panel de estadísticas.
 
-## 🚀 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### Backend
 - Node.js + Express
@@ -21,13 +21,13 @@ Sistema completo de gestión de ventas de productos financieros con autenticaci�
 - Recharts (gráficos)
 - React Hook Form
 
-## 📋 Requisitos Previos
+## Requisitos Previos
 
 - Node.js 16+ y npm
 - PostgreSQL 12+
 - Git
 
-## 🔧 Instalación y Configuración
+## Instalación y Configuración
 
 ### 1. Clonar el Repositorio
 
@@ -36,15 +36,7 @@ git clone <tu-repositorio>
 cd financial-sales-system
 ```
 
-### 2. Configurar Base de Datos
-
-Crear base de datos en PostgreSQL:
-
-```sql
-CREATE DATABASE financial_sales_db;
-```
-
-### 3. Configurar Backend
+### 2. Configurar Backend
 
 ```bash
 cd backend
@@ -55,11 +47,7 @@ Crear archivo `.env` en la carpeta `backend`:
 
 ```env
 PORT=5000
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=financial_sales_db
-DB_USER=postgres
-DB_PASSWORD=tu_password
+DATABASE_URL=postgres://postgres:tu_password@localhost:5432/financial_sales_db
 
 JWT_SECRET=tu_clave_secreta_muy_segura_cambiala_en_produccion
 JWT_EXPIRES_IN=24h
@@ -67,7 +55,7 @@ JWT_EXPIRES_IN=24h
 NODE_ENV=development
 ```
 
-### 4. Configurar Frontend
+### 3. Configurar Frontend
 
 ```bash
 cd frontend
@@ -80,7 +68,7 @@ Crear archivo `.env` en la carpeta `frontend`:
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
-### 5. Inicializar Base de Datos
+### 4. Inicializar Base de Datos
 
 Desde la carpeta `backend`:
 
@@ -92,7 +80,7 @@ Este comando creará las tablas y un usuario administrador por defecto:
 - Email: admin@banco.com
 - Password: Admin123!
 
-## 🚀 Ejecutar la Aplicación
+## Ejecutar la Aplicación
 
 ### Opción 1: Desarrollo Normal
 
@@ -118,7 +106,7 @@ La aplicación estará disponible en:
 docker-compose up
 ```
 
-## 👤 Usuarios de Prueba
+## Usuarios de Prueba
 
 ### Administrador
 - Email: admin@banco.com
@@ -128,7 +116,7 @@ docker-compose up
 - Email: asesor@banco.com
 - Password: Asesor123!
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 financial-sales-system/
@@ -179,29 +167,29 @@ financial-sales-system/
 └── README.md
 ```
 
-## 🔐 Características Implementadas
+## Características Implementadas
 
 ### Core Features
-- ✅ Sistema de autenticación con JWT
-- ✅ Validación CAPTCHA en backend
-- ✅ CRUD completo de usuarios
-- ✅ CRUD completo de ventas
-- ✅ Encriptación de contraseñas con Bcrypt
-- ✅ Roles de usuario (Administrador/Asesor)
-- ✅ Validaciones frontend y backend
-- ✅ Campos condicionales según tipo de producto
-- ✅ Filtrado de ventas por rol
+-  Sistema de autenticación con JWT
+-  Validación CAPTCHA en backend
+-  CRUD completo de usuarios
+-  CRUD completo de ventas
+-  Encriptación de contraseñas con Bcrypt
+-  Roles de usuario (Administrador/Asesor)
+-  Validaciones frontend y backend
+-  Campos condicionales según tipo de producto
+-  Filtrado de ventas por rol
 
 ### Features Adicionales (Plus)
-- ✅ UI moderna con Tailwind CSS
-- ✅ Gestión de estados de ventas (Abierto/En Proceso/Finalizado)
-- ✅ Dashboard con estadísticas y gráficos
-- ✅ Sumatoria de cupos solicitados
-- ✅ Historial de cambios con usuarios
-- ✅ Docker support
-- ✅ Programación orientada a objetos
-- ✅ Redux para manejo de estado
-- ✅ React Hooks y componentes funcionales
+-  UI moderna con Tailwind CSS
+-  Gestión de estados de ventas (Abierto/En Proceso/Finalizado)
+-  Dashboard con estadísticas y gráficos
+-  Sumatoria de cupos solicitados
+-  Historial de cambios con usuarios
+-  Docker support
+-  Programación orientada a objetos
+-  Redux para manejo de estado
+-  React Hooks y componentes funcionales
 
 ## 🎯 Funcionalidades por Rol
 
@@ -281,7 +269,7 @@ npm test
 - `npm run build` - Build para producción
 - `npm test` - Ejecutar tests
 
-## 🐳 Docker
+## Docker
 
 Construir y ejecutar con Docker:
 
@@ -294,7 +282,7 @@ Detener:
 docker-compose down
 ```
 
-## 🔒 Seguridad
+## Seguridad
 
 - Contraseñas encriptadas con Bcrypt (10 rounds)
 - Tokens JWT con expiración
@@ -304,7 +292,7 @@ docker-compose down
 - Rate limiting en endpoints sensibles
 - Validación CAPTCHA
 
-## 📝 API Endpoints
+## API Endpoints
 
 ### Auth
 - POST `/api/auth/login` - Login de usuario
@@ -325,29 +313,17 @@ docker-compose down
 - PATCH `/api/sales/:id/status` - Cambiar estado
 - GET `/api/sales/statistics` - Estadísticas
 
-## 🚀 Deploy en AWS (Opcional)
+## Deploy en AWS (Opcional)
 
 1. EC2 para backend
 2. RDS PostgreSQL para base de datos
 3. S3 + CloudFront para frontend
 4. Usar variables de entorno para configuración
 
-## 🤝 Contribuir
+## Contribuir
 
 1. Fork el proyecto
 2. Crear rama feature (`git checkout -b feature/nueva-caracteristica`)
 3. Commit cambios (`git commit -m 'Add nueva caracteristica'`)
 4. Push a la rama (`git push origin feature/nueva-caracteristica`)
 5. Abrir Pull Request
-
-## 📄 Licencia
-
-MIT
-
-## 👨‍💻 Autor
-
-Tu Nombre - [tu-email@ejemplo.com]
-
-## 📞 Soporte
-
-Para soporte, email a soporte@banco.com
